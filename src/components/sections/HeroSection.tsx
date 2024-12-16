@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
   return (
     <section id="home" className="pt-16 relative">
-      <div className="container px-4 py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="container px-4 py-12 md:py-20">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           <div className="space-y-6 animate-fadeIn text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
               Best Tutoring that your child can get
