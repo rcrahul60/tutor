@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DemoForm from "@/components/DemoForm";
+import HeroSection from "@/components/sections/HeroSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import TeachersSection from "@/components/sections/TeachersSection";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,7 +17,6 @@ import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
-  const { toast } = useToast();
 
   const openDemoForm = () => {
     setIsDemoFormOpen(true);
@@ -22,41 +25,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar onBookDemo={openDemoForm} />
+      <HeroSection onBookDemo={openDemoForm} />
       
-      {/* Hero Section */}
-      <section id="home" className="pt-16 relative">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png"
-            alt="Online tutoring"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        <div className="container relative z-10 px-4 py-20 md:py-32">
-          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fadeIn">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Best Tutoring that your child can get
-            </h1>
-            <p className="text-xl text-gray-600">
-              Premium one-to-one live classes for students of class 6th to 12th
-            </p>
-            <div className="space-y-4 text-gray-600">
-              <p>✓ Specialization in Maths and Science</p>
-              <p>✓ Faculty from top premier colleges</p>
-              <p>✓ Unique teaching methodology focused on concepts</p>
-              <p>✓ One-to-one personalized attention</p>
-            </div>
-            <Button
-              onClick={openDemoForm}
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-lg"
-            >
-              Book Free Demo Class
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* How it Works Section */}
       <section id="how-it-works" className="py-20 bg-gray-50">
         <div className="container px-4">
@@ -154,51 +124,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Teachers Section */}
-      <section id="teachers" className="py-20 bg-gray-50">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Expert Tutors</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Learn from successful teachers who have excelled in academics and understand
-              students' unique learning needs.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Rajesh Kumar",
-                college: "IIT Delhi",
-                achievement: "AIR 45 in GATE",
-                subjects: "Mathematics, Physics",
-              },
-              {
-                name: "Prof. Priya Sharma",
-                college: "IIT Bombay",
-                achievement: "Gold Medalist",
-                subjects: "Mathematics",
-              },
-              {
-                name: "Dr. Amit Verma",
-                college: "BITS Pilani",
-                achievement: "PhD in Physics",
-                subjects: "Physics",
-              },
-            ].map((teacher, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle>{teacher.name}</CardTitle>
-                  <CardDescription>{teacher.college}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{teacher.achievement}</p>
-                  <p className="text-gray-600">Teaches: {teacher.subjects}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
+      <TeachersSection />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
