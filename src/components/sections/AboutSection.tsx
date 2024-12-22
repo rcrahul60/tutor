@@ -1,12 +1,7 @@
-import { BookOpen, Users, Target, Brain, Calendar, MessageCircle } from "lucide-react";
+import { Users, Target, Brain, MessageCircle, Calendar } from "lucide-react";
 
 const AboutSection = () => {
   const features = [
-    {
-      icon: <BookOpen className="w-12 h-12 text-primary" />,
-      title: "Elite Academy",
-      description: "We are an elite Maths and Science academy providing premium one-to-one live classes for students of class 6th to 12th. Our faculties are graduates from premier colleges who have excelled in these subjects.",
-    },
     {
       icon: <Users className="w-12 h-12 text-primary" />,
       title: "Dedicated Team",
@@ -42,7 +37,7 @@ const AboutSection = () => {
             What is this about?
           </h2>
           <p className="text-lg text-gray-600">
-            What are we solving?
+            We are an elite Maths and Science academy providing premium one-to-one live classes.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
