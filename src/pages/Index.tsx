@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
 import PricingSection from "@/components/sections/PricingSection";
 import { BookOpen, Users, BrainCircuit, MessageSquare, Target, GraduationCap } from "lucide-react";
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
@@ -166,3 +167,4 @@ const Index = () => {
 };
 
 export default Index;
+
