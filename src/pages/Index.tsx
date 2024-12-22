@@ -5,17 +5,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
+import PricingSection from "@/components/sections/PricingSection";
 import { BookOpen, Users, BrainCircuit, MessageSquare, Target, GraduationCap } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
@@ -30,7 +21,6 @@ const Index = () => {
       <HeroSection onBookDemo={openDemoForm} />
       <AboutSection />
       
-      {/* How it Works Section */}
       <section id="how-it-works" className="py-20 bg-gray-50">
         <div className="container px-4">
           <div className="text-center mb-12">
@@ -138,8 +128,8 @@ const Index = () => {
 
       <TestimonialsSection />
       <TeachersSection />
+      <PricingSection />
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container px-4">
           <div className="grid md:grid-cols-3 gap-8">
