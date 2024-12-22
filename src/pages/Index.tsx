@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import DemoForm from "@/components/DemoForm";
 import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
 
@@ -26,6 +27,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar onBookDemo={openDemoForm} />
       <HeroSection onBookDemo={openDemoForm} />
+      <AboutSection />
       
       {/* How it Works Section */}
       <section id="how-it-works" className="py-20 bg-gray-50">
