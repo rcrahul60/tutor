@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
+import { BookOpen, Users, BrainCircuit, MessageSquare, Target, GraduationCap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -89,32 +90,41 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                icon: <BookOpen className="w-12 h-12 text-primary mb-4" />,
                 title: "Complete Coverage",
                 description: "Whether it's the entire syllabus or specific topics, we provide comprehensive coverage tailored to your needs.",
               },
               {
+                icon: <Users className="w-12 h-12 text-primary mb-4" />,
                 title: "Expert Tutors",
                 description: "Our tutors from premier colleges bring their expertise to help your child excel in studies.",
               },
               {
+                icon: <BrainCircuit className="w-12 h-12 text-primary mb-4" />,
                 title: "Problem Solving Focus",
                 description: "Extensive practice sessions ensure your child masters problem-solving techniques.",
               },
               {
+                icon: <MessageSquare className="w-12 h-12 text-primary mb-4" />,
                 title: "Doubt Clearing",
                 description: "Regular doubt clearing sessions ensure strong fundamental understanding.",
               },
               {
+                icon: <Target className="w-12 h-12 text-primary mb-4" />,
                 title: "Personalized Attention",
                 description: "One-to-one sessions allow us to adapt to your child's unique learning pace.",
               },
               {
+                icon: <GraduationCap className="w-12 h-12 text-primary mb-4" />,
                 title: "Advanced Learning",
                 description: "Option to cover higher-class topics in a personalized environment.",
               },
             ].map((benefit, index) => (
               <Card key={index}>
-                <CardHeader>
+                <CardHeader className="text-center">
+                  <div className="flex justify-center">
+                    {benefit.icon}
+                  </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
