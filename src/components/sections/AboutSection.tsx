@@ -40,8 +40,8 @@ const AboutSection = () => {
             We are an elite Maths and Science academy providing premium one-to-one live classes.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {features.slice(0, 3).map((feature, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-fadeIn"
@@ -56,6 +56,23 @@ const AboutSection = () => {
               </div>
             </div>
           ))}
+          <div className="lg:col-span-3 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {features.slice(3).map((feature, index) => (
+              <div
+                key={index + 3}
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 animate-fadeIn"
+                style={{ animationDelay: `${(index + 3) * 100}ms` }}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
