@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PhoneCall, ClipboardCheck, Tools, Sun } from "lucide-react";
+import { PhoneCall, ClipboardCheck, Wrench, Sun } from "lucide-react";
 
 const steps = [
   {
@@ -13,7 +13,7 @@ const steps = [
     description: "Get a tailored solar solution design based on your energy needs"
   },
   {
-    icon: <Tools className="h-8 w-8 text-white" />,
+    icon: <Wrench className="h-8 w-8 text-white" />,
     title: "Professional Installation",
     description: "Our certified team handles the complete installation process"
   },
