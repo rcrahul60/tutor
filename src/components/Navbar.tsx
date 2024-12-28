@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Sun, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
@@ -7,19 +7,19 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
 
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "Products", href: "#products" },
+    { label: "What is this About?", href: "#about" },
+    { label: "Benefits", href: "#benefits" },
     { label: "How it Works", href: "#how-it-works" },
-    { label: "About Us", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Teachers", href: "#teachers" },
+    { label: "Pricing", href: "#pricing" },
   ];
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#" className="text-2xl font-bold text-primary flex items-center gap-2">
-            <Sun className="h-8 w-8" />
-            SolarSquare
+          <a href="#" className="text-2xl font-bold text-primary">
+            TutorPro
           </a>
 
           {/* Desktop Menu */}
@@ -33,9 +33,8 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
                 {item.label}
               </a>
             ))}
-            <Button onClick={onBookDemo} className="bg-primary hover:bg-primary/90 flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              Contact Sales
+            <Button onClick={onBookDemo} className="bg-secondary hover:bg-secondary/90">
+              Book Free Demo Class
             </Button>
           </div>
 
@@ -66,10 +65,9 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
                 onBookDemo();
                 setIsOpen(false);
               }}
-              className="w-full mt-4 bg-primary hover:bg-primary/90 flex items-center gap-2 justify-center"
+              className="w-full mt-4 bg-secondary hover:bg-secondary/90"
             >
-              <Phone className="h-4 w-4" />
-              Contact Sales
+              Book Free Demo Class
             </Button>
           </div>
         )}
