@@ -7,7 +7,7 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
 
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "What is this About?", href: "#about" },
+    { label: "What is this About?", href: "#what-is-this-about" },
     { label: "Benefits", href: "#benefits" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "Teachers", href: "#teachers" },
