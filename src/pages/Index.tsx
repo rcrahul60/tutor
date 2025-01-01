@@ -31,15 +31,23 @@ const Index = () => {
               Personalized teaching to cater to your child's unique learning process.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left Column - Image */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80"
-                alt="Students learning"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/10 backdrop-blur-sm"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left Column - Text and Image */}
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-2xl shadow-sm">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Live one-to-one Maths and Science online classes for students of class 6 to Class 12.
+                  Personalized teaching to cater to your child's unique learning process.
+                </p>
+              </div>
+              <div className="relative h-[400px] rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80"
+                  alt="Students learning"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/10 backdrop-blur-sm"></div>
+              </div>
             </div>
 
             {/* Right Column - Steps */}
