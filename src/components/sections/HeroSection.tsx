@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section id="home" className="pt-16 relative">
       <div className="container px-4 py-12 md:py-20">
@@ -27,10 +30,14 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
             </Button>
           </div>
           <div className="relative h-[400px] md:h-[500px]">
+            <div className={`absolute inset-0 bg-gray-200 rounded-lg ${imageLoaded ? 'hidden' : 'block'}`} />
             <img
               src="/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png"
               alt="Online tutoring"
-              className="w-full h-full object-cover rounded-lg shadow-xl"
+              className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              loading="eager"
+              onLoad={() => setImageLoaded(true)}
+              fetchPriority="high"
             />
           </div>
         </div>

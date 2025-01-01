@@ -38,3 +38,7 @@
     scroll-behavior: smooth;
   }
 }
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
