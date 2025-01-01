@@ -31,37 +31,52 @@ const Index = () => {
               Personalized teaching to cater to your child's unique learning process.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Initial Discussion",
-                description: "Our counsellor discusses your child's requirements, strengths, and weaknesses.",
-              },
-              {
-                title: "Customized Plan",
-                description: "We prepare a tailored learning plan based on individual needs and discuss it with you.",
-              },
-              {
-                title: "Free Trial Class",
-                description: "Experience our teaching methodology with a free demo class from our expert faculty.",
-              },
-              {
-                title: "Regular Classes",
-                description: "After your approval, we begin regular personalized classes focused on your child's growth.",
-              },
-            ].map((step, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                    {index + 1}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left Column - Image */}
+            <div className="relative h-[500px] rounded-2xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80"
+                alt="Students learning"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/10 backdrop-blur-sm"></div>
+            </div>
+
+            {/* Right Column - Steps */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="grid gap-6">
+                {[
+                  {
+                    title: "Initial Discussion",
+                    description: "Our counsellor discusses your child's requirements, strengths, and weaknesses.",
+                  },
+                  {
+                    title: "Customized Plan",
+                    description: "We prepare a tailored learning plan based on individual needs and discuss it with you.",
+                  },
+                  {
+                    title: "Free Trial Class",
+                    description: "Experience our teaching methodology with a free demo class from our expert faculty.",
+                  },
+                  {
+                    title: "Regular Classes",
+                    description: "After your approval, we begin regular personalized classes focused on your child's growth.",
+                  },
+                ].map((step, index) => (
+                  <div key={index} className="flex gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
+                        {index + 1}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                      <p className="text-gray-600">{step.description}</p>
+                    </div>
                   </div>
-                  <CardTitle>{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -167,4 +182,3 @@ const Index = () => {
 };
 
 export default Index;
-
