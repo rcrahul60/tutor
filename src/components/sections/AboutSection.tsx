@@ -32,7 +32,7 @@ const AboutSection = () => {
 
   return (
     <section id="what-is-this-about" className="py-24 bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
-      <div className="container px-4 mx-auto">
+      <div className="container max-w-6xl px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What is this about?
@@ -42,9 +42,9 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="relative min-h-[900px]">
+        <div className="relative min-h-[800px]">
           {/* Central Image */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
             <CentralEducationImage />
           </div>
 
@@ -53,7 +53,7 @@ const AboutSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`absolute w-[350px] animate-fadeIn ${feature.position}`}
+                className={`absolute w-[300px] animate-fadeIn ${feature.position}`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <AboutFeatureCard
