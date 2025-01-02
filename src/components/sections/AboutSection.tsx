@@ -1,31 +1,38 @@
-import { BookOpen, BrainCircuit, Users, MessageSquare } from "lucide-react";
+import { Users, Brain, Target, MessageCircle, GraduationCap } from "lucide-react";
 import AboutFeatureCard from "./AboutFeatureCard";
+import CentralEducationImage from "./CentralEducationImage";
 
 const AboutSection = () => {
   const features = [
     {
-      title: "Special attention during exams",
-      description: "Get targeted support to excel in your exams with personalized attention.",
+      title: "Dedicated Team",
+      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes and homework help sessions, adapting to your child's unique learning pace.",
       position: "top-0 left-[10%]",
-      icon: BookOpen
-    },
-    {
-      title: "Extra focus on weak concepts",
-      description: "Receive dedicated attention on challenging topics to ensure thorough understanding.",
-      position: "top-0 right-[10%]",
-      icon: BrainCircuit
-    },
-    {
-      title: "Aligned to school curriculum",
-      description: "Ensure seamless learning with a course structure that mirrors the school's academic program.",
-      position: "bottom-0 left-[10%]",
       icon: Users
     },
     {
-      title: "Customized according to your schedule",
-      description: "Pick a class schedule that perfectly fits your daily routine.",
+      title: "Unique Methodology",
+      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. We assess each student's understanding and create custom learning paths.",
+      position: "top-0 right-[10%]",
+      icon: Brain
+    },
+    {
+      title: "Focused Learning",
+      description: "We conduct 3-4 classes weekly, with one dedicated to problem-solving and doubt clearing. Teachers adjust the pace based on student understanding and learning process.",
+      position: "bottom-0 left-[10%]",
+      icon: Target
+    },
+    {
+      title: "Regular Feedback",
+      description: "Our counsellor conducts bi-weekly discussions with students and parents to track progress and incorporate suggestions for continuous improvement.",
       position: "bottom-0 right-[10%]",
-      icon: MessageSquare
+      icon: MessageCircle
+    },
+    {
+      title: "Complete Mastery",
+      description: "Over 6-8 months, we help students master the entire course material through comprehensive coverage and extensive problem practice.",
+      position: "bottom-[40%] right-[5%]",
+      icon: GraduationCap
     },
   ];
 
@@ -41,14 +48,10 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="relative min-h-[800px]">
+        <div className="relative min-h-[900px]">
           {/* Central Image */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
-            <img 
-              src="/lovable-uploads/3e46580c-d4d7-49e8-9df0-d6d5869f1979.png" 
-              alt="Building blocks illustration"
-              className="w-full h-full object-contain"
-            />
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]">
+            <CentralEducationImage />
           </div>
 
           {/* Feature Cards */}
@@ -56,7 +59,7 @@ const AboutSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`absolute w-[300px] animate-fadeIn ${feature.position}`}
+                className={`absolute w-[350px] animate-fadeIn ${feature.position}`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <AboutFeatureCard
