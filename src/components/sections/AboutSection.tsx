@@ -1,3 +1,4 @@
+import { BookOpen, BrainCircuit, Users, MessageSquare } from "lucide-react";
 import AboutFeatureCard from "./AboutFeatureCard";
 
 const AboutSection = () => {
@@ -5,22 +6,26 @@ const AboutSection = () => {
     {
       title: "Special attention during exams",
       description: "Get targeted support to excel in your exams with personalized attention.",
-      position: "top-0 left-[10%]"
+      position: "top-0 left-[10%]",
+      icon: BookOpen
     },
     {
       title: "Extra focus on weak concepts",
       description: "Receive dedicated attention on challenging topics to ensure thorough understanding.",
-      position: "top-0 right-[10%]"
+      position: "top-0 right-[10%]",
+      icon: BrainCircuit
     },
     {
       title: "Aligned to school curriculum",
       description: "Ensure seamless learning with a course structure that mirrors the school's academic program.",
-      position: "bottom-0 left-[10%]"
+      position: "bottom-0 left-[10%]",
+      icon: Users
     },
     {
       title: "Customized according to your schedule",
       description: "Pick a class schedule that perfectly fits your daily routine.",
-      position: "bottom-0 right-[10%]"
+      position: "bottom-0 right-[10%]",
+      icon: MessageSquare
     },
   ];
 
@@ -57,6 +62,7 @@ const AboutSection = () => {
                 <AboutFeatureCard
                   title={feature.title}
                   description={feature.description}
+                  icon={feature.icon}
                   className="transform hover:-translate-y-2 transition-transform duration-300"
                 />
               </div>

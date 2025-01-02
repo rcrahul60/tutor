@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BookOpen, BrainCircuit, Users, MessageSquare, Target, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import DemoForm from "@/components/DemoForm";
 import HeroSection from "@/components/sections/HeroSection";
