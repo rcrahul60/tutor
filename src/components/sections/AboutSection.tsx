@@ -1,39 +1,33 @@
-import { Users, Brain, Target, MessageCircle, GraduationCap } from "lucide-react";
+import { Users, Brain, MessageCircle, GraduationCap } from "lucide-react";
 import AboutFeatureCard from "./AboutFeatureCard";
 import CentralEducationImage from "./CentralEducationImage";
 
 const AboutSection = () => {
   const features = [
     {
-      title: "Dedicated Team",
+      title: "Dedicated Teacher and Counsellor",
       description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes and homework help sessions, adapting to your child's unique learning pace.",
       position: "top-0 left-[10%]",
       icon: Users
     },
     {
-      title: "Unique Methodology",
-      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. We assess each student's understanding and create custom learning paths.",
+      title: "Unique learning Methodology",
+      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. Teachers adjust the pace based on student understanding and learning process.",
       position: "top-0 right-[10%]",
       icon: Brain
     },
     {
-      title: "Focused Learning",
-      description: "We conduct 3-4 classes weekly, with one dedicated to problem-solving and doubt clearing. Teachers adjust the pace based on student understanding and learning process.",
-      position: "bottom-0 left-[10%]",
-      icon: Target
-    },
-    {
-      title: "Regular Feedback",
+      title: "Regular Feedback and counselling",
       description: "Our counsellor conducts bi-weekly discussions with students and parents to track progress and incorporate suggestions for continuous improvement.",
-      position: "bottom-0 right-[10%]",
+      position: "bottom-0 left-[10%]",
       icon: MessageCircle
     },
     {
-      title: "Complete Mastery",
-      description: "Over 6-8 months, we help students master the entire course material through comprehensive coverage and extensive problem practice.",
-      position: "bottom-[40%] right-[5%]",
+      title: "Complete Subject Mastery",
+      description: "We conduct 3-4 classes weekly and over 6-8 months, students master the entire course material through comprehensive coverage and extensive problem practice.",
+      position: "bottom-0 right-[10%]",
       icon: GraduationCap
-    },
+    }
   ];
 
   return (
