@@ -1,58 +1,44 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "../ui/button";
 
-const teachers = [
-  {
-    name: "Dr. Rajesh Kumar",
-    college: "IIT Delhi",
-    achievement: "AIR 45 in GATE",
-    subjects: "Mathematics, Physics",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Prof. Priya Sharma",
-    college: "IIT Bombay",
-    achievement: "Gold Medalist",
-    subjects: "Mathematics",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Dr. Amit Verma",
-    college: "BITS Pilani",
-    achievement: "PhD in Physics",
-    subjects: "Physics",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-  },
-];
+interface TeachersSectionProps {
+  onBookDemo: () => void;
+}
 
-const TeachersSection = () => {
+const TeachersSection = ({ onBookDemo }: TeachersSectionProps) => {
   return (
-    <section id="teachers" className="py-20 bg-gray-50">
-      <div className="container px-4">
+    <section id="teachers" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Expert Tutors</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Learn from successful teachers who have excelled in academics and understand
-            students' unique learning needs.
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Expert Teachers
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Learn from experienced educators dedicated to your success
           </p>
+          <Button
+            onClick={onBookDemo}
+            size="lg"
+            className="bg-secondary hover:bg-secondary/90"
+          >
+            Book Free Demo Class
+          </Button>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teachers.map((teacher, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader className="space-y-4">
-                <Avatar className="w-24 h-24 mx-auto">
-                  <AvatarImage src={teacher.image} alt={teacher.name} />
-                  <AvatarFallback>{teacher.name[0]}</AvatarFallback>
-                </Avatar>
-                <CardTitle>{teacher.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="font-medium text-gray-900">{teacher.college}</p>
-                <p className="text-primary">{teacher.achievement}</p>
-                <p className="text-gray-600">Teaches: {teacher.subjects}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">John Doe</h3>
+            <p className="text-gray-600">Math Teacher</p>
+            <p className="mt-4">John has over 10 years of experience in teaching mathematics to students of all levels.</p>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Jane Smith</h3>
+            <p className="text-gray-600">Science Teacher</p>
+            <p className="mt-4">Jane specializes in physics and chemistry, helping students understand complex concepts.</p>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Emily Johnson</h3>
+            <p className="text-gray-600">Biology Teacher</p>
+            <p className="mt-4">Emily is passionate about biology and has a knack for making the subject engaging and fun.</p>
+          </div>
         </div>
       </div>
     </section>
