@@ -6,7 +6,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
-import PricingSection from "@/components/sections/PricingSection";
 
 const Index = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
@@ -111,57 +110,45 @@ const Index = () => {
                 icon: <BookOpen className="w-10 h-10" />,
                 title: "Complete Coverage",
                 description: "We provide comprehensive coverage of the syllabus with special attention during exams",
-                bgColor: "bg-blue-50",
-                iconColor: "text-blue-500",
-                borderColor: "border-blue-100"
+                iconColor: "text-blue-500"
               },
               {
                 icon: <BrainCircuit className="w-10 h-10" />,
                 title: "Problem Solving Focus",
                 description: "Extensive problem practice sessions ensure your child masters problem-solving techniques",
-                bgColor: "bg-orange-50",
-                iconColor: "text-orange-500",
-                borderColor: "border-orange-100"
+                iconColor: "text-blue-500"
               },
               {
                 icon: <Users className="w-10 h-10" />,
                 title: "Expert Tutors",
                 description: "Our tutors from premier colleges bring their expertise to help your child excel in studies.",
-                bgColor: "bg-purple-50",
-                iconColor: "text-purple-500",
-                borderColor: "border-purple-100"
+                iconColor: "text-blue-500"
               },
               {
                 icon: <MessageSquare className="w-10 h-10" />,
                 title: "Doubt Clearing",
                 description: "Regular doubt clearing sessions ensure strong fundamental understanding",
-                bgColor: "bg-green-50",
-                iconColor: "text-green-500",
-                borderColor: "border-green-100"
+                iconColor: "text-blue-500"
               },
               {
                 icon: <Target className="w-10 h-10" />,
                 title: "Advanced Learning",
                 description: "Option to cover higher-class topics in a personalized environment.",
-                bgColor: "bg-pink-50",
-                iconColor: "text-pink-500",
-                borderColor: "border-pink-100"
+                iconColor: "text-blue-500"
               },
               {
                 icon: <GraduationCap className="w-10 h-10" />,
                 title: "Bi-weekly Counselling sessions",
                 description: "We do regular discussion on student's progress with parents and incorporate their feedback in our learning plans.",
-                bgColor: "bg-yellow-50",
-                iconColor: "text-yellow-600",
-                borderColor: "border-yellow-100"
+                iconColor: "text-blue-500"
               },
             ].map((benefit, index) => (
               <div
                 key={index}
-                className={`${benefit.bgColor} border-2 ${benefit.borderColor} rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn`}
+                className="bg-white/90 backdrop-blur-sm border-2 border-blue-100 rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`${benefit.iconColor} mb-6`}>
+                <div className={benefit.iconColor}>
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -178,7 +165,6 @@ const Index = () => {
 
       <TestimonialsSection />
       <TeachersSection />
-      <PricingSection />
 
       <footer className="bg-gray-900 text-white py-12">
         <div className="container px-4">
