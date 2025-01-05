@@ -9,7 +9,7 @@ const CentralEducationImage = ({ className = "" }: CentralEducationImageProps) =
       <img 
         src="/lovable-uploads/9cfabade-0c25-488f-aa3f-9c1f416a4c64.png"
         alt="Education illustration"
-        className="relative w-full h-full object-cover opacity-60 rounded-2xl"
+        className="relative w-[800px] h-[800px] object-cover opacity-60 rounded-2xl"
       />
     </div>
   );

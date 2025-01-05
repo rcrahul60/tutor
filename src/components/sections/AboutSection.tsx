@@ -6,34 +6,34 @@ const AboutSection = () => {
   const features = [
     {
       title: "Dedicated Teacher and Counsellor",
-      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes and homework help sessions, adapting to your child's unique learning pace.",
-      position: "top-0 left-[10%]",
+      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes. Homework help sessions adapt to your child's unique learning pace.",
+      position: "top-0 left-[5%]",
       icon: Users
     },
     {
       title: "Unique learning Methodology",
-      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. Teachers adjust the pace based on student understanding and learning process.",
-      position: "top-0 right-[10%]",
+      description: "Our personalized study plan focuses on concept understanding. Regular doubt clearance sessions are conducted. Extensive problem practice is provided. Teachers adjust the pace based on student understanding.",
+      position: "top-0 right-[5%]",
       icon: Brain
     },
     {
       title: "Regular Feedback and counselling",
-      description: "Our counsellor conducts bi-weekly discussions with students and parents to track progress and incorporate suggestions for continuous improvement.",
-      position: "bottom-0 left-[10%]",
+      description: "Our counsellor conducts bi-weekly discussions with students. Parents are kept updated on progress. Suggestions are incorporated for continuous improvement.",
+      position: "bottom-0 left-[5%]",
       icon: MessageCircle
     },
     {
       title: "Complete Subject Mastery",
-      description: "We conduct 3-4 classes weekly and over 6-8 months, students master the entire course material through comprehensive coverage and extensive problem practice.",
-      position: "bottom-0 right-[10%]",
+      description: "We conduct 3-4 classes weekly over 6-8 months. Students master the entire course material. Comprehensive coverage ensures thorough understanding. Extensive problem practice reinforces learning.",
+      position: "bottom-0 right-[5%]",
       icon: GraduationCap
     }
   ];
 
   return (
-    <section id="what-is-this-about" className="py-24 bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
-      <div className="container max-w-6xl px-4 mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id="what-is-this-about" className="py-16 bg-gradient-to-br from-blue-50 to-green-50 overflow-hidden">
+      <div className="container max-w-7xl px-4 mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What is this about?
           </h2>
@@ -42,9 +42,9 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="relative min-h-[800px]">
+        <div className="relative min-h-[700px]">
           {/* Central Image */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
             <CentralEducationImage />
           </div>
 
@@ -53,7 +53,7 @@ const AboutSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`absolute w-[300px] animate-fadeIn ${feature.position}`}
+                className={`absolute animate-fadeIn ${feature.position}`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <AboutFeatureCard
