@@ -110,42 +110,42 @@ const Index = () => {
                 icon: <BookOpen className="w-10 h-10" />,
                 title: "Complete Coverage",
                 description: "We provide comprehensive coverage of the syllabus with special attention during exams",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
               {
                 icon: <BrainCircuit className="w-10 h-10" />,
                 title: "Problem Solving Focus",
                 description: "Extensive problem practice sessions ensure your child masters problem-solving techniques",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
               {
                 icon: <Users className="w-10 h-10" />,
                 title: "Expert Tutors",
                 description: "Our tutors from premier colleges bring their expertise to help your child excel in studies.",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
               {
                 icon: <MessageSquare className="w-10 h-10" />,
                 title: "Doubt Clearing",
                 description: "Regular doubt clearing sessions ensure strong fundamental understanding",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
               {
                 icon: <Target className="w-10 h-10" />,
                 title: "Advanced Learning",
                 description: "Option to cover higher-class topics in a personalized environment.",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
               {
                 icon: <GraduationCap className="w-10 h-10" />,
                 title: "Bi-weekly Counselling sessions",
                 description: "We do regular discussion on student's progress with parents and incorporate their feedback in our learning plans.",
-                iconColor: "text-blue-500"
+                iconColor: "text-secondary"
               },
             ].map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white/90 backdrop-blur-sm border-2 border-blue-100 rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
+                className="bg-[#FDE1D3] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={benefit.iconColor}>
