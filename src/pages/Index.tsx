@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import DemoForm from "@/components/DemoForm";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import BenefitsSection from "@/components/sections/BenefitsSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
 
@@ -19,7 +20,6 @@ const Index = () => {
       <Navbar onBookDemo={openDemoForm} />
       <HeroSection onBookDemo={openDemoForm} />
       <AboutSection />
-      
       <section id="how-it-works" className="py-20 bg-gray-50">
         <div className="container px-4">
           <div className="text-center mb-12">
@@ -89,80 +89,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
-        <div className="container px-4 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Our Tutoring Services?
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our Math's academy focuses on making fundamental concepts clear, with extensive
-              problem solving and regular doubt clearing sessions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <BookOpen className="w-10 h-10" />,
-                title: "Complete Coverage",
-                description: "We provide comprehensive coverage of the syllabus with special attention during exams",
-                iconColor: "text-secondary"
-              },
-              {
-                icon: <BrainCircuit className="w-10 h-10" />,
-                title: "Problem Solving Focus",
-                description: "Extensive problem practice sessions ensure your child masters problem-solving techniques",
-                iconColor: "text-secondary"
-              },
-              {
-                icon: <Users className="w-10 h-10" />,
-                title: "Expert Tutors",
-                description: "Our tutors from premier colleges bring their expertise to help your child excel in studies.",
-                iconColor: "text-secondary"
-              },
-              {
-                icon: <MessageSquare className="w-10 h-10" />,
-                title: "Doubt Clearing",
-                description: "Regular doubt clearing sessions ensure strong fundamental understanding",
-                iconColor: "text-secondary"
-              },
-              {
-                icon: <Target className="w-10 h-10" />,
-                title: "Advanced Learning",
-                description: "Option to cover higher-class topics in a personalized environment.",
-                iconColor: "text-secondary"
-              },
-              {
-                icon: <GraduationCap className="w-10 h-10" />,
-                title: "Bi-weekly Counselling sessions",
-                description: "We do regular discussion on student's progress with parents and incorporate their feedback in our learning plans.",
-                iconColor: "text-secondary"
-              },
-            ].map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-[#FDE1D3] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={benefit.iconColor}>
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <BenefitsSection />
       <TestimonialsSection />
       <TeachersSection />
 
