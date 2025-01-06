@@ -6,25 +6,25 @@ const AboutSection = () => {
   const features = [
     {
       title: "Dedicated Teacher and Counsellor",
-      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes. Homework help sessions adapt to your child's unique learning pace.",
+      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes and homework help sessions, adapting to your child's unique learning pace.",
       position: "top-0 left-[5%]",
       icon: Users
     },
     {
       title: "Unique learning Methodology",
-      description: "Our personalized study plan focuses on concept understanding. Regular doubt clearance sessions are conducted. Extensive problem practice is provided. Teachers adjust the pace based on student understanding.",
+      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. Teachers adjust the pace based on student understanding and learning process.",
       position: "top-0 right-[5%]",
       icon: Brain
     },
     {
       title: "Regular Feedback and counselling",
-      description: "Our counsellor conducts bi-weekly discussions with students. Parents are kept updated on progress. Suggestions are incorporated for continuous improvement.",
+      description: "Our counsellor conducts bi-weekly discussions with students and parents to track progress. Suggestions are incorporated for continuous improvement.",
       position: "bottom-0 left-[5%]",
       icon: MessageCircle
     },
     {
       title: "Complete Subject Mastery",
-      description: "We conduct 3-4 classes weekly over 6-8 months. Students master the entire course material. Comprehensive coverage ensures thorough understanding. Extensive problem practice reinforces learning.",
+      description: "We conduct 3-4 classes weekly with comprehensive coverage and extensive problem practice. Students master the entire course material in over 6-8 months.",
       position: "bottom-0 right-[5%]",
       icon: GraduationCap
     }
