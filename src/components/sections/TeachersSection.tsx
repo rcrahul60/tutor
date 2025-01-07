@@ -5,22 +5,16 @@ const teachers = [
   {
     name: "Vishal Pandey",
     college: "PEC",
-    achievement: "AIR 45 in GATE",
-    subjects: "Mathematics, Physics",
     image: "/lovable-uploads/e518e3c5-a4a5-437f-8e7a-77627fc5cd0c.png",
   },
   {
     name: "Raj Singh",
     college: "IIT Guwahati",
-    achievement: "Gold Medalist",
-    subjects: "Mathematics",
     image: "/lovable-uploads/6c7d2d58-6384-4949-9b88-e00719d44807.png",
   },
   {
     name: "Anand Singh",
     college: "IIT Varanasi",
-    achievement: "PhD in Physics",
-    subjects: "Physics",
     image: "/lovable-uploads/2dd054f6-ae38-45ef-93ac-9255f63dd1f7.png",
   },
 ];
@@ -48,8 +42,6 @@ const TeachersSection = () => {
               </CardHeader>
               <CardContent className="space-y-2">
                 <p className="font-medium text-gray-900">{teacher.college}</p>
-                <p className="text-primary">{teacher.achievement}</p>
-                <p className="text-gray-600">Teaches: {teacher.subjects}</p>
               </CardContent>
             </Card>
           ))}
