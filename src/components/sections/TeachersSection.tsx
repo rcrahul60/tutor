@@ -3,25 +3,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const teachers = [
   {
-    name: "Dr. Rajesh Kumar",
+    name: "Vishal Pandey",
     college: "IIT Delhi",
     achievement: "AIR 45 in GATE",
     subjects: "Mathematics, Physics",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/e518e3c5-a4a5-437f-8e7a-77627fc5cd0c.png",
   },
   {
-    name: "Prof. Priya Sharma",
+    name: "Raj Singh",
     college: "IIT Bombay",
     achievement: "Gold Medalist",
     subjects: "Mathematics",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/6c7d2d58-6384-4949-9b88-e00719d44807.png",
   },
   {
-    name: "Dr. Amit Verma",
+    name: "Anand Singh",
     college: "BITS Pilani",
     achievement: "PhD in Physics",
     subjects: "Physics",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/2dd054f6-ae38-45ef-93ac-9255f63dd1f7.png",
   },
 ];
 
