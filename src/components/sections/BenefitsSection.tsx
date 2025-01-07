@@ -46,7 +46,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-[#ffeee6] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
+              className="bg-[#FDE1D3] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className={benefit.iconColor}>
