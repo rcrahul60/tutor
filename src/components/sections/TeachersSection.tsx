@@ -4,21 +4,21 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const teachers = [
   {
     name: "Vishal Pandey",
-    college: "IIT Delhi",
+    college: "PEC",
     achievement: "AIR 45 in GATE",
     subjects: "Mathematics, Physics",
     image: "/lovable-uploads/e518e3c5-a4a5-437f-8e7a-77627fc5cd0c.png",
   },
   {
     name: "Raj Singh",
-    college: "IIT Bombay",
+    college: "IIT Guwahati",
     achievement: "Gold Medalist",
     subjects: "Mathematics",
     image: "/lovable-uploads/6c7d2d58-6384-4949-9b88-e00719d44807.png",
   },
   {
     name: "Anand Singh",
-    college: "BITS Pilani",
+    college: "IIT Varanasi",
     achievement: "PhD in Physics",
     subjects: "Physics",
     image: "/lovable-uploads/2dd054f6-ae38-45ef-93ac-9255f63dd1f7.png",
