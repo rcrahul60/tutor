@@ -31,7 +31,7 @@ const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
-      <div className="container px-4 relative">
+      <div className="container mx-auto px-4 max-w-6xl relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Choose Our Tutoring Services?
@@ -42,11 +42,11 @@ const BenefitsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-[#FDE1D3] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
+              className="bg-[#F2FCE2] backdrop-blur-sm rounded-3xl p-8 hover:scale-105 transition-transform duration-300 animate-fadeIn"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className={benefit.iconColor}>
