@@ -31,7 +31,7 @@ const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
-      <div className="container max-w-6xl px-4 relative mx-auto">
+      <div className="container max-w-7xl px-4 relative mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Choose Our Tutoring Services?
@@ -42,7 +42,7 @@ const BenefitsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
