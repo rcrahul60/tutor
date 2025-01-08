@@ -31,7 +31,7 @@ const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 opacity-50"></div>
-      <div className="container mx-auto px-4 max-w-6xl relative">
+      <div className="container max-w-7xl px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Choose Our Tutoring Services?
