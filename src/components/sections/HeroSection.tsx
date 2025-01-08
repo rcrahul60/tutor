@@ -4,6 +4,19 @@ import { useEffect, useState } from "react";
 const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  useEffect(() => {
+    // Preload the image
+    const img = new Image();
+    img.src = "/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png";
+    if (img.complete) {
+      setImageLoaded(true);
+    } else {
+      img.onload = () => {
+        setImageLoaded(true);
+      };
+    }
+  }, []);
+
   return (
     <section id="home" className="pt-16 relative">
       <div className="container px-4 py-12 md:py-20">
@@ -36,7 +49,6 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
               alt="Online tutoring"
               className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
               loading="eager"
-              onLoad={() => setImageLoaded(true)}
               fetchPriority="high"
             />
           </div>
