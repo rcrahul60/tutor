@@ -5,16 +5,19 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    // Preload the image
     const img = new Image();
     img.src = "/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png";
+    
+    // Check if image is already cached
     if (img.complete) {
       setImageLoaded(true);
     } else {
-      img.onload = () => {
-        setImageLoaded(true);
-      };
+      img.onload = () => setImageLoaded(true);
     }
+
+    return () => {
+      img.onload = null;
+    };
   }, []);
 
   return (
@@ -43,13 +46,18 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
             </Button>
           </div>
           <div className="relative h-[400px] md:h-[500px]">
-            <div className={`absolute inset-0 bg-gray-200 rounded-lg ${imageLoaded ? 'hidden' : 'block'}`} />
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg" />
+            )}
             <img
               src="/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png"
               alt="Online tutoring"
-              className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
+              onLoad={() => setImageLoaded(true)}
             />
           </div>
         </div>
