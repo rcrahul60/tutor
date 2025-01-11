@@ -3,9 +3,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const teachers = [
   {
-    name: "Vishal Pandey",
-    college: "PEC",
-    image: "/lovable-uploads/e518e3c5-a4a5-437f-8e7a-77627fc5cd0c.png",
+    name: "Anand Singh",
+    college: "IIT Varanasi",
+    image: "/lovable-uploads/2dd054f6-ae38-45ef-93ac-9255f63dd1f7.png",
   },
   {
     name: "Raj Singh",
@@ -13,9 +13,9 @@ const teachers = [
     image: "/lovable-uploads/6c7d2d58-6384-4949-9b88-e00719d44807.png",
   },
   {
-    name: "Anand Singh",
-    college: "IIT Varanasi",
-    image: "/lovable-uploads/2dd054f6-ae38-45ef-93ac-9255f63dd1f7.png",
+    name: "Vishal Pandey",
+    college: "PEC",
+    image: "/lovable-uploads/e518e3c5-a4a5-437f-8e7a-77627fc5cd0c.png",
   },
 ];
 

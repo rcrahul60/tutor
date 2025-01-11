@@ -113,7 +113,7 @@ const Index = () => {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-              <p className="text-gray-400">Email: info@tutorpro.com</p>
+              <p className="text-gray-400">Email: contact@tutorpro.com</p>
               <p className="text-gray-400">Phone: +1 234 567 890</p>
             </div>
           </div>
