@@ -50,10 +50,10 @@ const SignupPage = () => {
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Book Your Free Class
+                Book Your Free Demo Class
               </h1>
               <p className="text-gray-600 text-lg">
-                Experience the power of personalized learning with our expert teachers
+                Experience personalized learning with our expert teachers
               </p>
             </div>
 
