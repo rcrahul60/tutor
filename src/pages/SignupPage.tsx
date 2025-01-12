@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, Star } from "lucide-react";
 
 const formSchema = z.object({
@@ -24,6 +24,7 @@ const formSchema = z.object({
 });
 
 const SignupPage = () => {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,12 +36,33 @@ const SignupPage = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    toast({
-      title: "Registration successful!",
-      description: "We'll contact you shortly to schedule your free class.",
-    });
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      // Create email content
+      const emailContent = `
+        New Demo Class Registration:
+        Parent's Name: ${values.parentName}
+        Email: ${values.email}
+        Phone: ${values.phone}
+        Child's Name: ${values.childName}
+        Grade: ${values.grade}
+      `;
+
+      // Send email using mailto link
+      const mailtoLink = `mailto:contact@illumiamind.com?subject=New Demo Class Registration&body=${encodeURIComponent(emailContent)}`;
+      window.location.href = mailtoLink;
+
+      toast({
+        title: "Registration successful!",
+        description: "We'll contact you shortly to schedule your free class.",
+      });
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
