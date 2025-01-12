@@ -2,10 +2,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
+import { ArrowRight, Star } from "lucide-react";
 
 const formSchema = z.object({
   parentName: z.string().min(2, "Parent name must be at least 2 characters"),
@@ -30,22 +38,29 @@ const SignupPage = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     toast({
       title: "Registration successful!",
-      description: "We'll contact you shortly to get started.",
+      description: "We'll contact you shortly to schedule your free class.",
     });
     console.log(values);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#F5F7F9]">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Book Your Free Demo Class
+                Book Your Free Class
               </h1>
               <p className="text-gray-600 text-lg">
                 Experience the power of personalized learning with our expert teachers
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 mb-8 bg-blue-50 p-4 rounded-lg">
+              <Star className="text-yellow-400 h-5 w-5" />
+              <p className="text-sm text-gray-700">
+                Join 50,000+ students already learning with TutorPro
               </p>
             </div>
 
@@ -56,9 +71,13 @@ const SignupPage = () => {
                   name="parentName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Parent's Name</FormLabel>
+                      <FormLabel className="text-gray-700">Parent's Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter parent's name" {...field} />
+                        <Input 
+                          placeholder="Enter parent's name" 
+                          {...field}
+                          className="h-12 text-base"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -70,9 +89,14 @@ const SignupPage = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel className="text-gray-700">Email Address</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="Enter your email" {...field} />
+                        <Input 
+                          type="email" 
+                          placeholder="Enter your email" 
+                          {...field}
+                          className="h-12 text-base"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -84,9 +108,14 @@ const SignupPage = () => {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
+                      <FormLabel className="text-gray-700">Phone Number</FormLabel>
                       <FormControl>
-                        <Input type="tel" placeholder="Enter your phone number" {...field} />
+                        <Input 
+                          type="tel" 
+                          placeholder="Enter your phone number" 
+                          {...field}
+                          className="h-12 text-base"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -98,9 +127,13 @@ const SignupPage = () => {
                   name="childName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Child's Name</FormLabel>
+                      <FormLabel className="text-gray-700">Child's Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Enter child's name" {...field} />
+                        <Input 
+                          placeholder="Enter child's name" 
+                          {...field}
+                          className="h-12 text-base"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -112,10 +145,10 @@ const SignupPage = () => {
                   name="grade"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Grade</FormLabel>
+                      <FormLabel className="text-gray-700">Grade</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="h-12 text-base">
                             <SelectValue placeholder="Select grade" />
                           </SelectTrigger>
                         </FormControl>
@@ -132,8 +165,12 @@ const SignupPage = () => {
                   )}
                 />
 
-                <Button type="submit" className="w-full bg-primary text-white text-lg py-6">
-                  Book Free Demo Class
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary text-white text-lg h-14 mt-4"
+                >
+                  Book Free Class
+                  <ArrowRight className="ml-2" />
                 </Button>
               </form>
             </Form>
