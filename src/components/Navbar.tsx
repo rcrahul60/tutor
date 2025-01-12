@@ -1,74 +1,98 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
-const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavbarProps {
+  onBookDemo: () => void;
+}
 
-  const menuItems = [
-    { label: "Home", href: "#home" },
-    { label: "What is this About?", href: "#what-is-this-about" },
-    { label: "Benefits", href: "#benefits" },
-    { label: "How it Works", href: "#how-it-works" },
-    { label: "Teachers", href: "#teachers" },
-    { label: "Pricing", href: "#pricing" },
-  ];
+const Navbar = ({ onBookDemo }: NavbarProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+    <nav className="bg-white shadow-sm fixed w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#" className="text-2xl font-bold text-primary">
-            TutorPro
-          </a>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-            <Button onClick={onBookDemo} className="bg-secondary hover:bg-secondary/90">
-              Book Free Demo Class
-            </Button>
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold text-primary">
+              TutorPro
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-600 hover:text-gray-900">
+              Home
+            </Link>
+            <a href="#benefits" className="text-gray-600 hover:text-gray-900">
+              Benefits
+            </a>
+            <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">
+              How it Works
+            </a>
+            <a href="#teachers" className="text-gray-600 hover:text-gray-900">
+              Teachers
+            </a>
+            <Link to="/signup">
+              <Button variant="default" className="bg-primary text-white">
+                Book Demo Class
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-600 hover:text-gray-900 focus:outline-none"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block py-2 text-gray-600 hover:text-primary"
-                onClick={() => setIsOpen(false)}
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden pb-4">
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMenuOpen(false)}
               >
-                {item.label}
+                Home
+              </Link>
+              <a
+                href="#benefits"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Benefits
               </a>
-            ))}
-            <Button 
-              onClick={() => {
-                onBookDemo();
-                setIsOpen(false);
-              }}
-              className="w-full mt-4 bg-secondary hover:bg-secondary/90"
-            >
-              Book Free Demo Class
-            </Button>
+              <a
+                href="#how-it-works"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                How it Works
+              </a>
+              <a
+                href="#teachers"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Teachers
+              </a>
+              <Link
+                to="/signup"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Button variant="default" className="w-full bg-primary text-white">
+                  Book Demo Class
+                </Button>
+              </Link>
+            </div>
           </div>
         )}
       </div>
