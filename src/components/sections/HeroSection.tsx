@@ -56,7 +56,7 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               onLoad={() => setImageLoaded(true)}
             />
           </div>
