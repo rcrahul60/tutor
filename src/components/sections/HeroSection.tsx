@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import DemoForm from "../DemoForm";
 
-const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
+const HeroSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
 
   useEffect(() => {
     const img = new Image();
@@ -38,7 +40,7 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
               <p>✓ One-to-one personalized attention</p>
             </div>
             <Button
-              onClick={onBookDemo}
+              onClick={() => setIsDemoFormOpen(true)}
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-lg"
             >
@@ -62,6 +64,11 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
           </div>
         </div>
       </div>
+
+      <DemoForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </section>
   );
 };

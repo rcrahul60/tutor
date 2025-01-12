@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { BookOpen, BrainCircuit, Users, MessageSquare, Target, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import DemoForm from "@/components/DemoForm";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
@@ -9,16 +7,10 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeachersSection from "@/components/sections/TeachersSection";
 
 const Index = () => {
-  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
-
-  const openDemoForm = () => {
-    setIsDemoFormOpen(true);
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onBookDemo={openDemoForm} />
-      <HeroSection onBookDemo={openDemoForm} />
+      <Navbar />
+      <HeroSection />
       <AboutSection />
       <section id="how-it-works" className="py-20 bg-gray-50">
         <div className="container px-4">
@@ -122,8 +114,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      <DemoForm isOpen={isDemoFormOpen} onClose={() => setIsDemoFormOpen(false)} />
     </div>
   );
 };
