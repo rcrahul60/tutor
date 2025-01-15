@@ -89,7 +89,7 @@ const Index = () => {
         <div className="container px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">TutorPro</h3>
+              <h3 className="text-xl font-bold mb-4">Illumia Mind</h3>
               <p className="text-gray-400">
                 Empowering students with personalized education
               </p>
@@ -109,7 +109,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 TutorPro. All rights reserved.</p>
+            <p>&copy; 2024 Illumia Mind. All rights reserved.</p>
           </div>
         </div>
       </footer>
