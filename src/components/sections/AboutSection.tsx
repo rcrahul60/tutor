@@ -1,8 +1,13 @@
 import { Users, Brain, MessageCircle, GraduationCap } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import AboutFeatureCard from "./AboutFeatureCard";
 import CentralEducationImage from "./CentralEducationImage";
+import DemoForm from "../DemoForm";
 
 const AboutSection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  
   const features = [
     {
       title: "Dedicated Teacher and Counsellor",
@@ -37,9 +42,15 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What is this about?
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 mb-8">
             We are an elite Maths and Science academy providing premium one-to-one live classes.
           </p>
+          <Button 
+            onClick={() => setIsDemoFormOpen(true)}
+            className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-lg h-auto"
+          >
+            Book Free Demo Class
+          </Button>
         </div>
 
         <div className="relative min-h-[700px]">
@@ -67,6 +78,11 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+
+      <DemoForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </section>
   );
 };
