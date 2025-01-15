@@ -47,7 +47,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="relative min-h-[700px] mb-12">
+        <div className="relative min-h-[700px] mb-20">
           {/* Central Image */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
             <CentralEducationImage />
