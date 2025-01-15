@@ -105,8 +105,7 @@ const Index = () => {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-              <p className="text-gray-400">Email: contact@tutorpro.com</p>
-              <p className="text-gray-400">Phone: +1 234 567 890</p>
+              <p className="text-gray-400">Email: contact@illumiamind.com</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
