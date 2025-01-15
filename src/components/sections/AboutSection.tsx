@@ -42,18 +42,12 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             What is this about?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600">
             We are an elite Maths and Science academy providing premium one-to-one live classes.
           </p>
-          <Button 
-            onClick={() => setIsDemoFormOpen(true)}
-            className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-lg h-auto"
-          >
-            Book Free Demo Class
-          </Button>
         </div>
 
-        <div className="relative min-h-[700px]">
+        <div className="relative min-h-[700px] mb-12">
           {/* Central Image */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
             <CentralEducationImage />
@@ -76,6 +70,16 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Demo Button Section */}
+        <div className="text-center mt-8">
+          <Button 
+            onClick={() => setIsDemoFormOpen(true)}
+            className="bg-secondary hover:bg-secondary/90 text-white px-8 py-6 text-lg h-auto"
+          >
+            Book Free Demo Class
+          </Button>
         </div>
       </div>
 
