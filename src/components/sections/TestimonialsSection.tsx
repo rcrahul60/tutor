@@ -10,13 +10,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Rajesh Kumar",
     role: "Parent of Class 8 Student",
     content: "The personalized attention my child receives has made a remarkable difference in their understanding of mathematics.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
   },
   {
-    name: "Michael Chen",
+    name: "Amit Patel",
     role: "Parent of Class 10 Student",
     content: "The teachers here are exceptional. My son's grades in Physics have improved significantly.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",

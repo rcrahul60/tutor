@@ -1,8 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import DemoForm from "../DemoForm";
 
-const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
+const HeroSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png";
+    
+    // Check if image is already cached
+    if (img.complete) {
+      setImageLoaded(true);
+    } else {
+      img.onload = () => setImageLoaded(true);
+    }
+
+    return () => {
+      img.onload = null;
+    };
+  }, []);
 
   return (
     <section id="home" className="pt-16 relative">
@@ -22,7 +40,7 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
               <p>✓ One-to-one personalized attention</p>
             </div>
             <Button
-              onClick={onBookDemo}
+              onClick={() => setIsDemoFormOpen(true)}
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-lg"
             >
@@ -30,18 +48,27 @@ const HeroSection = ({ onBookDemo }: { onBookDemo: () => void }) => {
             </Button>
           </div>
           <div className="relative h-[400px] md:h-[500px]">
-            <div className={`absolute inset-0 bg-gray-200 rounded-lg ${imageLoaded ? 'hidden' : 'block'}`} />
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg" />
+            )}
             <img
               src="/lovable-uploads/d4fffc11-49bb-4ceb-a907-39b309bcea48.png"
               alt="Online tutoring"
-              className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+              className={`w-full h-full object-cover rounded-lg shadow-xl transition-opacity duration-300 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
               loading="eager"
-              onLoad={() => setImageLoaded(true)}
               fetchPriority="high"
+              onLoad={() => setImageLoaded(true)}
             />
           </div>
         </div>
       </div>
+
+      <DemoForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </section>
   );
 };

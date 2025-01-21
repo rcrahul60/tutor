@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import DemoForm from "./DemoForm";
 
-const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
 
   const menuItems = [
     { label: "Home", href: "#home" },
@@ -19,7 +21,7 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a href="#" className="text-2xl font-bold text-primary">
-            TutorPro
+            Illumia Mind
           </a>
 
           {/* Desktop Menu */}
@@ -33,7 +35,10 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
                 {item.label}
               </a>
             ))}
-            <Button onClick={onBookDemo} className="bg-secondary hover:bg-secondary/90">
+            <Button 
+              onClick={() => setIsDemoFormOpen(true)} 
+              className="bg-secondary hover:bg-secondary/90"
+            >
               Book Free Demo Class
             </Button>
           </div>
@@ -62,7 +67,7 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
             ))}
             <Button 
               onClick={() => {
-                onBookDemo();
+                setIsDemoFormOpen(true);
                 setIsOpen(false);
               }}
               className="w-full mt-4 bg-secondary hover:bg-secondary/90"
@@ -72,6 +77,11 @@ const Navbar = ({ onBookDemo }: { onBookDemo: () => void }) => {
           </div>
         )}
       </div>
+
+      <DemoForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </nav>
   );
 };
