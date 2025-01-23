@@ -28,7 +28,7 @@ const Index = () => {
                   Powering education with personalized learning
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Live one-to-one Maths and Science online classes for students of class 6 to Class 12.
+                  Live one-to-one Maths online classes for students of class 6 to Class 12.
                   Personalized teaching to cater to your child's unique learning process.
                 </p>
               </div>

@@ -28,13 +28,13 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <div className="space-y-6 animate-fadeIn text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Best Tutoring that your child can get
+              Best Maths Tutoring that your child can get
             </h1>
             <p className="text-xl text-gray-600">
               Premium one-to-one live classes for students of class 6th to 12th
             </p>
             <div className="space-y-4 text-gray-600">
-              <p>✓ Specialization in Maths and Science</p>
+              <p>✓ Specialisation in Maths</p>
               <p>✓ Faculty from top premier colleges</p>
               <p>✓ Unique teaching methodology focused on concepts</p>
               <p>✓ One-to-one personalized attention</p>

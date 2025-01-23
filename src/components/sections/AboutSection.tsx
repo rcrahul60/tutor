@@ -28,7 +28,7 @@ const AboutSection = () => {
       icon: MessageCircle
     },
     {
-      title: "Complete Subject Mastery",
+      title: "Complete Maths Mastery",
       description: "We conduct 3-4 classes weekly with comprehensive coverage and extensive problem practice. Students master the entire course material in over 6-8 months.",
       position: "bottom-0 right-[5%]",
       icon: GraduationCap
