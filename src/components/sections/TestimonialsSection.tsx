@@ -6,26 +6,22 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
+    name: "Akash Sharma",
+    role: "Parent of Class 9 Student",
+    content: "A big thank you to Sankalp sir for turning my child's Maths grades around. His creative problem-solving techniques and constant encouragement have instilled a love for Maths in my child. I couldn't have asked for a better tutor.",
+  },
+  {
+    name: "Vivek Lal",
     role: "Parent of Class 8 Student",
-    content: "The personalized attention my child receives has made a remarkable difference in their understanding of mathematics.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    content: "Vishal sir's unique teaching style has been a game-changer for my son. He used to fear Maths, but now Maths is his favorite subject! The personalized attention and regular practice sessions have worked wonders. We are so grateful for the transformation.",
   },
   {
-    name: "Amit Patel",
+    name: "Meera Gupta",
     role: "Parent of Class 10 Student",
-    content: "The teachers here are exceptional. My son's grades in Physics have improved significantly.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Priya Sharma",
-    role: "Parent of Class 11 Student",
-    content: "The unique teaching methodology has helped my daughter develop a strong foundation in Science.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    content: "My daughter struggled with Maths for years, but after learning from Raj sir, everything changed. His patience and clear explanations built her confidence, and she's now excelling in her exams! Thank you, Raj sir, for your dedication and expertise.",
   },
 ];
 
@@ -46,10 +42,6 @@ const TestimonialsSection = () => {
                 <Card className="border-none shadow-lg">
                   <CardContent className="p-6">
                     <div className="flex flex-col items-center space-y-4">
-                      <Avatar className="w-20 h-20">
-                        <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                        <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                      </Avatar>
                       <p className="text-lg text-gray-700 italic">"{testimonial.content}"</p>
                       <div className="text-center">
                         <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
