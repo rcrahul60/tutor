@@ -11,13 +11,13 @@ const BenefitsSection = () => {
     {
       icon: <BrainCircuit className="w-10 h-10" />,
       title: "Problem Solving Focus",
-      description: "Extensive problem practice sessions in class and in assignments ensure your child masters problem-solving techniques.",
+      description: "Extensive problem practice sessions in class and in assignments ensure your child masters problem-solving techniques",
       iconColor: "text-secondary"
     },
     {
       icon: <Users className="w-10 h-10" />,
       title: "Expert Tutors",
-      description: "Our teachers are from premier colleges and have extensive teaching experience bringing their expertise to help your child excel in studies.",
+      description: "Our teachers are from premier colleges and have extensive teaching experience bringing their expertise to help your child excel in studies",
       iconColor: "text-secondary"
     },
     {
@@ -38,7 +38,7 @@ const BenefitsSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our Math's academy focuses on making fundamental concepts clear, with extensive
-            problem solving and regular doubt clearing sessions.
+            problem solving and regular doubt clearing sessions
           </p>
         </div>
         
