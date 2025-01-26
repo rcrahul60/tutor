@@ -4,26 +4,26 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: <BookOpen className="w-10 h-10" />,
-      title: "Dedicated Teacher and Counsellor",
-      description: "A team of 1 teacher and 1 counsellor work dedicated with your child. Undivided attention is given during live classes and homework help sessions, adapting to your child's unique learning pace.",
+      title: "Complete Coverage",
+      description: "We provide comprehensive coverage of the syllabus with special attention provided during exams to ace them",
       iconColor: "text-secondary"
     },
     {
       icon: <BrainCircuit className="w-10 h-10" />,
-      title: "Unique learning Methodology",
-      description: "Our personalized study plan focuses on concept understanding, doubt clearance, and extensive problem practice. Teachers adjust the pace based on student understanding and learning process.",
+      title: "Problem Solving Focus",
+      description: "Extensive problem practice sessions in class and in assignments ensure your child masters problem-solving techniques",
       iconColor: "text-secondary"
     },
     {
       icon: <Users className="w-10 h-10" />,
-      title: "Regular Feedback and counselling",
-      description: "Our counsellor conducts bi-weekly discussions with students and parents to track progress. Suggestions are incorporated for continuous improvement.",
+      title: "Expert Tutors",
+      description: "Our teachers are from premier colleges and have extensive teaching experience bringing their expertise to help your child excel in studies",
       iconColor: "text-secondary"
     },
     {
       icon: <GraduationCap className="w-10 h-10" />,
-      title: "Complete Subject Mastery",
-      description: "We conduct 3-4 classes weekly with comprehensive coverage and extensive problem practice. Students master the entire course material in over 6-8 months",
+      title: "Advanced Learning",
+      description: "Option to cover higher-class topics in a personalized environment and regular doubt clearing sessions ensure strong fundamental understanding",
       iconColor: "text-secondary"
     }
   ];
@@ -38,7 +38,7 @@ const BenefitsSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our Math's academy focuses on making fundamental concepts clear, with extensive
-            problem solving and regular doubt clearing sessions.
+            problem solving and regular doubt clearing sessions
           </p>
         </div>
         
