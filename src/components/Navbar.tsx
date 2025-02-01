@@ -10,8 +10,9 @@ const Navbar = () => {
   const menuItems = [
     { label: "Home", href: "#home" },
     { label: "What is this About?", href: "#what-is-this-about" },
-    { label: "Benefits", href: "#benefits" },
     { label: "How it Works", href: "#how-it-works" },
+    { label: "Benefits", href: "#benefits" },
+    { label: "Testimonials", href: "#what-our-parents-say" },
     { label: "Teachers", href: "#teachers" },
   ];
 
