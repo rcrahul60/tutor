@@ -82,7 +82,9 @@ const Index = () => {
         </div>
       </section>
       <BenefitsSection />
-      <TestimonialsSection />
+      <div id="what-our-parents-say">
+        <TestimonialsSection />
+      </div>
       <TeachersSection />
 
       <footer className="bg-gray-900 text-white py-12">
